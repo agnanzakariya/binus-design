@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BINUS Design - User Login</title>
+
+        <!-- load stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i|Material+Icons">
+        <link rel="stylesheet" href="assets/binus/login/css/style.css">
+    </head>
+
+    <body>
+        <div class="site" id="page">
+
+            <!-- module: login: type-1 -->
+            <section class="M--login type--1 U--fixed-layout">
+                <div class="login__wrapper U--table -full-height">
+                    <div class="login__box table__cell -vertical-align--middle">
+                        <div class="login__container">
+                            <div class="login__card C--card type--1 -remove-padding">
+                                <header class="login__header">
+                                    <div class="U--table">
+                                        <div class="table__cell -auto-width">
+                                            <span class="header__ribbon icon-default--ribbon-university" data-grunticon-embed></span>
+                                        </div>
+                                        <div class="table__cell">
+                                            <a href="index.html" class="header__logo">
+                                                <img src="http://dmd.binus.ac.id/frontend/binus-framework-client/binus-alumni/assets/images/logo/logo.svg" alt="" width="172" height="88">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="login__body">
+                                    <form action="" class="login__form" method="POST">
+                                        <div class="form__field">
+                                            <input type="text" class="C--textbox type--1" placeholder="Username">
+                                        </div>
+                                        <div class="form__field">
+                                            <div
+                                                class="C--passbox type--1 -autoload"
+                                                data-id="passbox"
+                                                data-name="password"
+                                                data-placeholder="Password"
+                                                data-class=""
+                                                data-value="">
+                                            </div>
+                                        </div>
+                                        <div class="form__action">
+                                            <button type="submit" class="C--button type--1 -theme-primary -full-width">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <footer class="login__footer">
+                                    <ul class="footer__links">
+                                        <li class="link__item">
+                                            <a href="#">Forgot Your Password?</a>
+                                        </li>
+                                        <li class="link__item">
+                                            <a href="index.html">Back to Home</a>
+                                        </li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- using jQuery as a JS library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <!-- load client script, for login template -->
+        <script src="assets/binus/login/js/script.js"></script>
+        <script>
+        (function($) {
+            $(document).ready(function() {
+                $('.login__form').on('submit', function(event) {
+                    event.preventDefault();
+                    document.location.href = 'home.html';
+                });
+            });
+        })(jQuery);
+        </script>
+
+        <!-- load grunticon -->
+        <script src="assets/binus/login/icons/grunticon.loader.js"></script>
+        <script>
+            grunticon([
+                'assets/binus/login/icons/icons.data.svg.css',
+                'assets/binus/login/icons/icons.data.png.css',
+                'assets/binus/login/icons/icons.fallback.css'
+            ], grunticon.svgLoadedCallback);
+        </script>
+    </body>
+</html>

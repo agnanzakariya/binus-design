@@ -1,0 +1,18 @@
+{
+  "name": "lurik",
+  "version": "0.0.1",
+  "description": "A configurational framework for creating a modular static web templates.",
+  "main": "app.js",
+  "scripts": {},
+  "author": "Fachri Riyanto",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-exec": "^3.0.0",
+    "grunt-grunticon": "^2.3.2"
+  }
+}
