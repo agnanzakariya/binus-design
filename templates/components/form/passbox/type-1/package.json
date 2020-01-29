@@ -1,0 +1,23 @@
+{
+    "about": {
+        "ID": "passbox",
+        "name": "Passbox",
+        "description": "",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "style": {
+        "main": [
+            "style.scss"
+        ]
+    },
+    "script": {
+        "main": [
+            "script.js"
+        ]
+    }
+}

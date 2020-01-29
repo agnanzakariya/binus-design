@@ -1,0 +1,26 @@
+/**
+ * Add border property.
+ */
+ @mixin border($position: "all", $color: $border-color) {
+    @if $position == "top" {
+        border-top: 1px solid $color;
+    } @else if $position == "right" {
+        border-right: 1px solid $color;
+    } @else if $position == "bottom" {
+        border-bottom: 1px solid $color;
+    } @else if $position == "left" {
+        border-left: 1px solid $color;
+    } @else {
+        border: 1px solid $color;
+    }
+}
+
+/**
+ * Material icons.
+ */
+@mixin material-icon() {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: $text-color;
+    line-height: 1;
+}

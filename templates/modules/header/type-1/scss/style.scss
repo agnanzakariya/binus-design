@@ -1,0 +1,25 @@
+.M--header.type--1 {
+    display: block;
+    position: relative;
+    padding: 200px 0;
+    .container {
+        padding: 0;
+        max-width: 480px;
+        @media (max-width: 480px + 32) {
+            padding: 0 16px;
+        }
+    }
+    .header__title {
+        display: block;
+        margin: 0;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 12px;
+    }
+    .header__tagline {
+        display: block;
+        margin: 24px 0 0;
+        font-size: 1.8rem;
+    }
+}

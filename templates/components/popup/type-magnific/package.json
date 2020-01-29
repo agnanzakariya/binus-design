@@ -1,0 +1,26 @@
+{
+    "about": {
+        "ID": "popup",
+        "name": "Popup",
+        "description": "Popup component using Magnific Popup.",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "npm": [
+        "magnific-popup"
+    ],
+    "style": {
+        "npm": [
+            "node_modules/magnific-popup/dist/magnific-popup.css"
+        ]
+    },
+    "script": {
+        "npm": [
+            "node_modules/magnific-popup/dist/jquery.magnific-popup.js"
+        ]
+    }
+}

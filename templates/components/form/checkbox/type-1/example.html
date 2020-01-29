@@ -1,0 +1,85 @@
+<div class="C--checkbox type--1">
+    <div class="checkbox__item -is-selected">
+        <span class="checkbox__indicator">
+            <span class="indicator__background">
+                <i class="indicator__icon material-icons">done</i>
+            </span>
+        </span>
+        <span class="checkbox__label">Football</span>
+        <input type="checkbox" name="hobby" value="A" class="checkbox__component" checked="checked">
+    </div>
+    <div class="checkbox__item">
+        <span class="checkbox__indicator">
+            <span class="indicator__background">
+                <i class="indicator__icon material-icons">done</i>
+            </span>
+        </span>
+        <span class="checkbox__label">Swimming</span>
+        <input type="checkbox" name="hobby" value="B" class="checkbox__component">
+    </div>
+    <div class="checkbox__item -is-disabled">
+        <span class="checkbox__indicator">
+            <span class="indicator__background">
+                <i class="indicator__icon material-icons">done</i>
+            </span>
+        </span>
+        <span class="checkbox__label">Reading</span>
+        <input type="checkbox" name="hobby" value="B" class="checkbox__component">
+    </div>
+</div>
+
+<!-- component autoload -->
+<div class="C--checkbox type--1 -autoload">
+    ...
+</div>
+
+<!-- vertical layout -->
+<div class="C--checkbox type--1 -autoload -is-vertical">
+    ...
+</div>
+
+<!-- javascript usage -->
+<script>
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onClickItem
+             */
+            $('.C--checkbox.type--1').BINUS_Checkbox_One({
+                /**
+                 * When item clicked/selected.
+                 * @param {Element} element The selected element.
+                 * @param {Object} input The selected input item. You can use input.val() to get the value of the input item.
+                 */
+                onClickItem: function(element, input) {
+                    console.log('item_clicked', element, input);
+                }
+            });
+
+            /**
+             * If you want to init a component with custom action.
+             */
+            $('.C--checkbox.type--1.Your-Class-Name').BINUS_Checkbox_One({
+                onClickItem: function(object, item) {
+                    console.log('item_clicked', object, item);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                }
+            });
+
+            /**
+             * Reset component.
+             * @param {String} method
+             */
+            $('.C--checkbox.type--1').BINUS_Checkbox_One('reset');
+
+            /**
+             * Destroy component.
+             * @param {String} method
+             */
+            $('.C--checkbox.type--1').BINUS_Checkbox_One('destroy');
+        });
+    })(jQuery);
+</script>

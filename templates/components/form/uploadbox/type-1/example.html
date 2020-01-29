@@ -1,0 +1,51 @@
+<div class="C--uploadbox type--1 -autoload"
+    data-id="uploadbox"
+    data-class=""
+    data-name="file">
+</div>
+
+<!-- javascript usage -->
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onChangeFile
+             */
+            $('.C--uploadbox.type--1').BINUS_Uploadbox_One({
+                /**
+                 * When selected file.
+                 * @param {Element} element The selected element.
+                 * @param {File} file File object.
+                 */
+                onChangeFile: function(element, file) {
+                    console.log('on_selected_file', element, file);
+                }
+            });
+
+            /**
+             * If you want to init a component with custom action.
+             */
+            $('.C--uploadbox.type--1.Your-Class-Name').BINUS_Uploadbox_One({
+                onChangeFile: function(element, file) {
+                    console.log('on_selected_file', element, file);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                }
+            });
+
+            /**
+             * Reset component.
+             * @param {String} method
+             */
+            $('.C--uploadbox.type--1').BINUS_Uploadbox_One('reset');
+
+            /**
+             * Destroy component.
+             * @param {String} method
+             */
+            $('.C--uploadbox.type--1').BINUS_Uploadbox_One('destroy');
+        });
+    })(jQuery);
+</script>

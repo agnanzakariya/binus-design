@@ -1,0 +1,73 @@
+.C--post.type--1 {
+    display: block;
+    white-space: normal;
+    .post__card {
+        display: block;
+        position: relative;
+        background-color: #fff;
+    }
+    .post__thumbnail {
+        display: block;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        @include border-radius($border-radius $border-radius 0 0);
+        .thumbnail__image {
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .thumbnail__ratio {
+            display: block;
+            padding-top: 50%;
+        }
+    }
+    .post__detail {
+        display: block;
+        padding: 16px;
+        height: 97px;
+        overflow: hidden;
+    }
+    .post__title {
+        display: block;
+        display: -webkit-box;
+        margin: 0;
+        max-height: 44px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $text-color;
+        line-height: 1.4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    .post__date {
+        display: block;
+        display: -webkit-box;
+        margin-top: 8px;
+        height: 19px;
+        overflow: hidden;
+        font-size: 1.35rem;
+        color: #777;
+        line-height: 1.45;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+
+    /* give card a shadow */
+    &.-has-shadow {
+        .post__card {
+            box-shadow: 1px 0 6px rgba(0,0,0,.2);
+        }
+    }
+
+    /* make card rounded */
+    &.-rounded {
+        .post__card {
+            @include border-radius($border-radius);
+        }
+    }
+}

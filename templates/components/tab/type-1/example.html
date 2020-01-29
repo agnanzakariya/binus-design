@@ -1,0 +1,59 @@
+<div class="C--tab type--1 -autoload">
+    <header class="tab__header">
+        <ul class="tab__list">
+            <li class="list__item -current-item">
+                <a href="#tab__one">Tab One</a>
+            </li>
+            <li class="list__item">
+                <a href="#tab__two">Tab Two</a>
+            </li>
+        </ul>
+    </header>
+    <div class="tab__body">
+        <div class="body__item -current-item" id="tab__one">
+            Tab one content.
+        </div>
+        <div class="body__item" id="tab__two">
+            Tab two content.
+        </div>
+    </div>
+</div>
+
+<!-- javascript usage -->
+<script>
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onClickItem
+             */
+            $('.C--tab.type--1').BINUS_Tab_One({
+                /**
+                 * When item clicked.
+                 * @param {Element} item The selected item.
+                 */
+                onClickItem: function(item) {
+                    console.log('on_item_clicked', item);
+                }
+            });
+
+            /**
+             * If you want to init a component with custom action.
+             */
+            $('.C--tab.type--1.Your-Class-Name').BINUS_Tab_One({
+                onClickItem: function(item) {
+                    console.log('on_item_clicked', item);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                }
+            });
+
+            /**
+             * Destroy component.
+             * @param {String} method
+             */
+            $('.C--tab.type--1').BINUS_Tab_One('destroy');
+        });
+    })(jQuery);
+</script>

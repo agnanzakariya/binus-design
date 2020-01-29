@@ -1,0 +1,66 @@
+.C--uploadbox.type--1 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fff;
+    @include border;
+    @include border-radius($border-radius);
+    .uploadbox__label {
+        display: block;
+        margin-left: 30px;
+        padding: 0 13px;
+        height: 40px;
+        font-size: 1.4rem;
+        line-height: 42px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .uploadbox__component {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0 13px;
+        width: 100%;
+        height: 100%;
+        font-size: 1.4rem;
+        cursor: pointer;
+        outline: 0;
+        background-color: #fff;
+        box-shadow: none;
+        @include opacity(0);
+        @include border;
+    }
+    .uploadbox__indicator {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        z-index: 2;
+        width: 40px;
+        height: 100%;
+        background-color: #fff;
+        .material-icons {
+            display: block;
+            margin-top: 0;
+            line-height: 1;
+        }
+    }
+    .uploadbox__remove {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        z-index: 2;
+        width: 40px;
+        height: 100%;
+        background-color: #fff;
+    }
+    &.-is-focus {
+        border-color: $border-color-focus;
+    }
+}

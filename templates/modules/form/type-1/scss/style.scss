@@ -1,0 +1,29 @@
+.M--form.type--1 {
+    display: block;
+    position: relative;
+    .form__message {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .form__field {
+        display: block;
+        margin: 0 0 20px;
+        .field__label {
+            display: block;
+            margin: 0 0 8px;
+            font-size: 1.4rem;
+            color: $text-color-secondary;
+            line-height: 1.45;
+        }
+        .field__small {
+            display: block;
+            margin: 6px 0 0;
+            font-size: 1.25rem;
+            color: $text-color-secondary;
+            line-height: 1.3;
+        }
+    }
+    .form__action {
+        display: block;
+    }
+}

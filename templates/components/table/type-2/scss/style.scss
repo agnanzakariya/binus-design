@@ -1,0 +1,45 @@
+/**
+ * Define global style.
+ */
+$table-border-color: #e6e6e6;
+
+.C--table.type--2 {
+    border: 0;
+    table {
+        width: 100%;
+    }
+    thead {
+        tr {
+            th, td {
+                padding: 12px;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 1.4;
+                color: $text-color-secondary;
+                text-align: left;
+                background-color: $border-color;
+                @include border('bottom');
+                @include opacity(.8);
+            }
+        }
+    }
+    tbody {
+        tr {
+            td, th {
+                padding: 12px;
+                font-size: 1.4rem;
+                line-height: 1.4;
+                text-align: left;
+                @include border('bottom');
+            }
+            th {
+                font-weight: bold;
+            }
+            &:last-child {
+                td, th {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

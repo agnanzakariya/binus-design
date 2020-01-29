@@ -1,0 +1,125 @@
+<div class="C--alert type--1">
+    <span class="alert__label">
+        Your simple alert message.
+    </span>
+</div>
+<div class="C--alert type--1 -is-success">
+    <span class="alert__label">
+        Your simple alert message.
+    </span>
+</div>
+<div class="C--alert type--1 -is-error">
+    <span class="alert__label">
+        Your simple alert message.
+    </span>
+</div>
+<div class="C--alert type--1 -is-warning">
+    <span class="alert__label">
+        Your simple alert message.
+    </span>
+</div>
+<div class="C--alert type--1 -is-information">
+    <span class="alert__label">
+        Your simple alert message.
+    </span>
+</div>
+
+<!-- layout with close button -->
+<div class="C--alert type--1 -autoload">
+    <div class="U--table">
+        <div class="table__cell">
+            <span class="alert__label">
+                Your alert message.
+            </span>
+        </div>
+        <div class="table__cell -vertical-align--middle -auto-width">
+            <button class="alert__icon button--hide-alert">
+                <i class="material-icons -display-block">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="C--alert type--1 -is-success -autoload">
+    <div class="U--table">
+        <div class="table__cell">
+            <span class="alert__label">
+                Your alert message.
+            </span>
+        </div>
+        <div class="table__cell -vertical-align--middle -auto-width">
+            <button class="alert__icon button--hide-alert">
+                <i class="material-icons -display-block">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="C--alert type--1 -is-error -autoload">
+    <div class="U--table">
+        <div class="table__cell">
+            <span class="alert__label">
+                Your alert message.
+            </span>
+        </div>
+        <div class="table__cell -vertical-align--middle -auto-width">
+            <button class="alert__icon button--hide-alert">
+                <i class="material-icons -display-block">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="C--alert type--1 -is-warning -autoload">
+    <div class="U--table">
+        <div class="table__cell">
+            <span class="alert__label">
+                Your alert message.
+            </span>
+        </div>
+        <div class="table__cell -vertical-align--middle -auto-width">
+            <button class="alert__icon button--hide-alert">
+                <i class="material-icons -display-block">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="C--alert type--1 -is-information -autoload">
+    <div class="U--table">
+        <div class="table__cell">
+            <span class="alert__label">
+                Your alert message.
+            </span>
+        </div>
+        <div class="table__cell -vertical-align--middle -auto-width">
+            <button class="alert__icon button--hide-alert">
+                <i class="material-icons -display-block">close</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- javascript usage -->
+<script>
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onHideAlert
+             */
+            $('.C--alert.type--1').BINUS_Alert_One({
+                /**
+                 * When hiding message.
+                 * You can add your custom action here.
+                 * @param {Element} element The selected element.
+                 */
+                onHideAlert: function(element) {
+                    console.log('on_hide_alert', element);
+                }
+            });
+
+            /**
+             * Destroying component.
+             * @param {String} method
+             */
+            $('.C--alert.type--1').BINUS_Alert_One('destroy');
+        });
+    })(jQuery);
+</script>

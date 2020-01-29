@@ -1,0 +1,54 @@
+.C--passbox.type--1 {
+    display: block;
+    position: relative;
+    .passbox__input {
+        display: block;
+        padding: 0 13px;
+        width: 100%;
+        height: 40px;
+        font-size: 1.4rem;
+        background: #fff;
+        outline: 0;
+        box-shadow: none;
+        @include border;
+        @include border-radius($border-radius);
+        &:focus {
+            border-color: $border-color-focus;
+        }
+    }
+    .passbox__key {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 40px;
+        height: 100%;
+        background: none;
+        cursor: pointer;
+        .material-icons {
+            line-height: 1;
+        }
+        .visibility__on {
+            display: block;
+        }
+        .visibility__off {
+            display: none;
+        }
+    }
+    &.-is-show {
+        .passbox__key {
+            .visibility__on {
+                display: none;
+            }
+            .visibility__off {
+                display: block;
+            }
+        }
+    }
+    &.-is-disabled {
+        .passbox__input {
+            background: #f2f2f2;
+        }
+    }
+}

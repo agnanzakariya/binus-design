@@ -1,0 +1,26 @@
+{
+    "about": {
+        "ID": "wrapper",
+        "name": "Wrapper",
+        "description": "",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "components": [
+        { "name": "avatar", "type": ["type-1"] }
+    ],
+    "style": {
+        "main": [
+            "style.scss"
+        ]
+    },
+    "script": {
+        "main": [
+            "script.js"
+        ]
+    }
+}

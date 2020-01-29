@@ -1,0 +1,37 @@
+.C--breadcrumb.type--1 {
+    display: block;
+    .breadcrumb__container {
+        display: block;
+        display: -webkit-box;
+        overflow: hidden;
+        height: 25px;
+        line-height: 1.4;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .breadcrumb__item {
+        position: relative;
+        font-size: 1.4rem;
+        color: $text-color;
+        text-decoration: none;
+        vertical-align: middle;
+        &:after {
+            display: initial;
+            vertical-align: top;
+            content: 'keyboard_arrow_right';
+            font-family: 'Material Icons';
+            font-size: 24px;
+            line-height: 1;
+            color: $text-color-secondary;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    a.breadcrumb__item {
+        color: $primary-color;
+    }
+}

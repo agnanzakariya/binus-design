@@ -1,0 +1,192 @@
+.C--datatables.type--1 {
+    .dataTables_length,
+    .dataTables_filter {
+        margin-bottom: 16px;
+    }
+    .dataTables_length {
+        label {
+            display: block;
+            font-size: 1.35rem;
+            line-height: 1.4;
+            select {
+                margin: 0 4px;
+                padding: 0 16px;
+                height: 32px;
+                font-size: 1.4rem;
+                background-color: #fff;
+                outline: 0;
+                @include box-shadow(none);
+                @include border;
+                @include border-radius(6px);
+            }
+        }
+    }
+    .dataTables_filter {
+        label {
+            display: inline-block;
+            position: relative;
+            font-size: 0;
+            &:after {
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 8px;
+                z-index: 1;
+                content: 'search';
+                margin-top: -10px;
+                font-family: 'Material Icons';
+                font-size: 20px;
+                color: $text-color-secondary;
+                line-height: 1;
+            }
+            input {
+                display: block;
+                position: relative;
+                margin: 0;
+                padding: 0 12px;
+                width: 200px;
+                height: 32px;
+                font-size: 1.4rem;
+                outline: 0;
+                @include box-shadow(none);
+                @include border;
+                @include border-radius(6px);
+            }
+        }
+    }
+    .dataTables_info {
+        padding-top: 0;
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+    .dataTables_paginate {
+        padding-top: 0;
+        .paginate_button {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 4px;
+            min-width: 34px;
+            color: $text-color-secondary !important;
+            outline: 0;
+            &:active,
+            &:hover {
+                color: $text-color !important;
+                background: none;
+                border: 0;
+                outline: 0;
+                box-shadow: none !important;
+            }
+            &.current {
+                padding: 4px;
+                color: $primary-color !important;
+                background: #f5f5f5;
+                border: 0;
+                @include border-radius(6px);
+            }
+            &.previous,
+            &.next {
+                font-size: 0;
+                &:before {
+                    display: block;
+                    font-family: 'Material Icons';
+                    font-size: 24px;
+                    color: $text-color-secondary;
+                    line-height: 1;
+                    @include opacity(.7);
+                    -webkit-transition: opacity .2s;
+                    transition: opacity .2s;
+                }
+                &:hover {
+                    &:before {
+                        @include opacity(1);
+                    }
+                }
+                &.disabled {
+                    @include opacity(.7);
+                    &:hover {
+                        @include opacity(.7);
+                    }
+                }
+            }
+            &.previous {
+                &:before {
+                    content: 'keyboard_arrow_left';
+                }
+            }
+            &.next {
+                &:before {
+                    content: 'keyboard_arrow_right';
+                }
+            }
+        }
+    }
+    .datatables {
+        margin: 16px 0;
+        overflow: hidden;
+        @include border;
+        @include border-radius(6px);
+        thead {
+            .sorting_asc,
+            .sorting_desc,
+            .sorting {
+                position: relative;
+                background-image: none;
+                &::before,
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    z-index: 1;
+                    margin-top: -9px;
+                    margin-right: 8px;
+                    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+                    font-size: 1.75rem;
+                    color: #c9c9c9;
+                    line-height: 1;
+                }
+                &:before {
+                    right: 8px;
+                    content: "\2191";
+                }
+                &:after {
+                    content: "\2193";
+                }
+            }
+            .sorting_asc {
+                &::before {
+                    color: $text-color-secondary;
+                }
+            }
+            .sorting_desc {
+                &::after {
+                    color: $text-color-secondary;
+                }
+            }
+            tr {
+                th {
+                    padding: 12px;
+                    font-size: 1.45rem;
+                    font-weight: 600;
+                    color: $text-color;
+                    line-height: 1.45;
+                    text-align: left;
+                    background-color: #f7f7f7;
+                    outline: 0;
+                    box-shadow: none;
+                    border-bottom: 0;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 12px;
+                    font-size: 1.45rem;
+                    @include border('top');
+                }
+            }
+        }
+    }
+}

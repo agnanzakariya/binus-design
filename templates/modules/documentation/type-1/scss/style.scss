@@ -1,0 +1,43 @@
+.M--documentation.type--1 {
+    display: block;
+    .documentation__section {
+        display: block;
+        margin: 0 0 40px;
+        .section__title {
+            display: block;
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        .section__text {
+            display: block;
+            margin: 0 0 24px;
+        }
+        .section__example {
+            display: block;
+            position: relative;
+            margin: 32px 0 24px;
+            @include border('top');
+            @include border('bottom');
+            &:before {
+                display: inline-block;
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                z-index: 1;
+                content: 'EXAMPLE';
+                padding: 4px 6px;
+                font-size: .85rem;
+                font-weight: 600;
+                color: $text-color;
+                line-height: 1;
+                letter-spacing: 1px;
+                background-color: #ffdd57;
+            }
+            .example__item {
+                margin: 12px 0;
+            }
+        }
+    }
+}

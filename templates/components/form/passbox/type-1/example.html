@@ -1,0 +1,84 @@
+<div
+    class="C--passbox type--1 -autoload"
+    data-id="passbox"
+    data-name="password"
+    data-placeholder="Password"
+    data-class=""
+    data-value="">
+</div>
+
+<!-- javascript usage -->
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onShow
+             * @param {Function} onHide
+             */
+            $('.C--passbox.type--1').BINUS_Passbox_One({
+                /**
+                 * When showing a value.
+                 * @param {Element} element The selected element.
+                 * @param {Object} component Component controller.
+                 * @param {Object} attribute Component attribute.
+                 */
+                onShow: function(element, component, attribute) {
+                    console.log('on_show', element, component, attribute);
+                },
+
+                /**
+                 * When hiding a value.
+                 * @param {Element} element The selected element.
+                 * @param {Object} component Component controller.
+                 * @param {Object} attribute Component attribute.
+                 */
+                onHide: function(element, component, attribute) {
+                    console.log('on_hide', element, component, attribute);
+                }
+            });
+
+            /**
+             * If you want to init a component with custom action.
+             */
+            $('.C--passbox.type--1.Your-Class-Name').BINUS_Passbox_One({
+                onShow: function(element, component, attribute) {
+                    console.log('on_show', element, component, attribute);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                },
+                onHide: function(element, component, attribute) {
+                    console.log('on_hide', element, component, attribute);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                }
+            });
+
+            /**
+             * Reset component.
+             * @param {String} method
+             */
+            $('.C--passbox.type--1').BINUS_Passbox_One('reset');
+
+            /**
+             * Destroy component.
+             * @param {String} method
+             */
+            $('.C--passbox.type--1').BINUS_Passbox_One('destroy');
+
+            /**
+             * Enabling component.
+             * @param {String} method
+             */
+            $('.C--passbox.type--1').BINUS_Passbox_One('enabled');
+
+            /**
+             * Disabling component.
+             * @param {String} method
+             */
+            $('.C--passbox.type--1').BINUS_Passbox_One('disabled');
+        });
+    })(jQuery);
+</script>

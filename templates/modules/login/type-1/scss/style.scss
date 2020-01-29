@@ -1,0 +1,78 @@
+.M--login.type--1 {
+    background: $primary-color;
+    .login__wrapper {
+        .login__box {
+            padding: 16px;
+        }
+    }
+    .login__container {
+        display: block;
+        margin: auto;
+        max-width: 340px;
+    }
+    .login__card {
+        overflow: hidden;
+    }
+    .login__header {
+        display: block;
+        position: relative;
+        padding: 0 8px 24px;
+        @include border('bottom');
+        .header__ribbon {
+            display: block;
+            margin-right: 16px;
+            width: 42px;
+        }
+        .header__logo {
+            display: block;
+            margin-top: 16px;
+            img {
+                display: block;
+            }
+        }
+    }
+    .login__body {
+        display: block;
+        padding: 32px 24px;
+    }
+    .login__form {
+        display: block;
+        .form__field {
+            display: block;
+            margin: 0 0 24px;
+        }
+        .form__action {
+            display: block;
+        }
+    }
+    .login__footer {
+        display: block;
+        background-color: #f2f2f2;
+        .footer__links {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .link__item {
+                display: block;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                @include border('top');
+                a {
+                    display: block;
+                    padding: 12px 16px;
+                    font-size: 1.35rem;
+                    color: $text-color-secondary;
+                    line-height: 1.5;
+                    text-decoration: none;
+                }
+                &:hover {
+                    a {
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}

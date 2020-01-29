@@ -1,0 +1,32 @@
+{
+    "about": {
+        "ID": "calendar",
+        "name": "Calendar",
+        "description": "Calendar component using Fullcalendar.",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "npm": [
+        "@fullcalendar/core",
+        "@fullcalendar/daygrid"
+    ],
+    "style": {
+        "npm": [
+            "node_modules/@fullcalendar/core/main.css",
+            "node_modules/@fullcalendar/daygrid/main.css"
+        ],
+        "main": [
+            "style.scss"
+        ]
+    },
+    "script": {
+        "npm": [
+            "node_modules/@fullcalendar/core/main.js",
+            "node_modules/@fullcalendar/daygrid/main.js"
+        ]
+    }
+}

@@ -1,0 +1,81 @@
+.C--radio-button.type--1 {
+    display: block;
+    .radio-button__item {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin-right: 24px;
+        cursor: pointer;
+        .radio-button__indicator {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            vertical-align: middle;
+            margin-right: 4px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            @include border;
+            @include border-radius(20px);
+            .indicator__background {
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                z-index: 0;
+                background: #fff;
+                @include border-radius(100%);
+            }
+        }
+        .radio-button__label {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.4rem;
+        }
+        .radio-button__component {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            @include opacity(0);
+        }
+        &.-is-disabled {
+            .radio-button__indicator {
+                background: #f2f2f2;
+                border-color: #e6e6e6;
+                .indicator__background {
+                    background: #f2f2f2;
+                }
+            }
+        }
+        &.-is-selected {
+            .radio-button__indicator {
+                background: #F3931B;
+                .indicator__background {
+                    top: 4px;
+                    left: 4px;
+                    right: 4px;
+                    bottom: 4px;
+                    background: #fff;
+                }
+            }
+            &.-is-disabled {
+                .radio-button__indicator {
+                    @include opacity(.5);
+                }
+            }
+        }
+    }
+    &.-is-vertical {
+        .radio-button__item {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+}

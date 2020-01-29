@@ -1,0 +1,28 @@
+.C--pagination.type--1 {
+    display: block;
+    .pagination__display {
+        display: inline-block;
+        margin-right: 32px;
+        vertical-align: middle;
+        font-size: 1.5rem;
+        line-height: 1.55;
+    }
+    .pagination__lists {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        line-height: 0;
+        white-space: nowrap;
+        .pagination__item {
+            display: inline-block;
+            padding: 8px 6px;
+            vertical-align: middle;
+            font-size: 1.5rem;
+            line-height: 1.55;
+            color: $text-color;
+            &.-current-item {
+                color: $primary-color;
+            }
+        }
+    }
+}

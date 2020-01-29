@@ -1,0 +1,38 @@
+.C--legend.type--1 {
+    display: block;
+    padding: 16px;
+    background-color: #fff;
+    @include border;
+    @include border-radius($border-radius);
+    .legend__header {
+        display: block;
+        padding-bottom: 12px;
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.5;
+        @include border('bottom');
+    }
+    .legend__body {
+        display: block;
+        padding: 16px 0 0;
+    }
+    .legend__lists {
+        .legend__item {
+            .item__bullet {
+                display: block;
+                margin-top: 6.5px;
+                margin-right: 12px;
+                width: 8px;
+                height: 8px;
+                background-color: $primary-color;
+                @include border-radius(8px);
+            }
+            .item__label {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 1.4rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}

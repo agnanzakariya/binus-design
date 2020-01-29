@@ -1,0 +1,25 @@
+{
+    "about": {
+        "ID": "datatables",
+        "name": "Datatables",
+        "description": "",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "style": {
+        "main": [
+            "datatables.scss",
+            "style.scss"
+        ]
+    },
+    "script": {
+        "main": [
+            "datatables.js",
+            "script.js"
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+.C--tab.type--1 {
+    display: block;
+    .tab__header {
+        display: block;
+        position: relative;
+        @include border('bottom');
+        .tab__list {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0;
+            line-height: 0;
+            white-space: nowrap;
+            overflow: auto;
+            .list__item {
+                display: inline-block;
+                margin-right: 16px;
+                vertical-align: top;
+                border-bottom: 2px solid transparent;
+                a {
+                    display: block;
+                    padding: 12px 0;
+                    font-size: 1.45rem;
+                    color: $text-color-secondary;
+                    line-height: 1.5;
+                    text-decoration: none;
+                }
+                &:hover {
+                    a {
+                        color: $text-color;
+                    }
+                }
+                &.-current-item {
+                    border-bottom-color: $color-orange;
+                    a {
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+    .tab__body {
+        display: block;
+        position: relative;
+        padding-top: 24px;
+        .body__item {
+            display: none;
+            &.-current-item {
+                display: block;
+            }
+        }
+    }
+}

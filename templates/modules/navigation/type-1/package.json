@@ -1,0 +1,28 @@
+{
+    "about": {
+        "ID": "navigation",
+        "name": "Navigation",
+        "description": "",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "helpers": [
+        { "name": "table-layout", "type": ["type-1"] }
+    ],
+    "components": [],
+    "icons": [],
+    "style": {
+        "main": [
+            "style.scss"
+        ]
+    },
+    "script": {
+        "main": [
+            "script.js"
+        ]
+    }
+}

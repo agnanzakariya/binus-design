@@ -1,0 +1,104 @@
+.C--button.type--1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #AFAFAF;
+    background-image: linear-gradient(0deg, #AFAFAF 0%, #C3C3C3 100%);
+    outline: 0;
+    border: 0;
+    @include border-radius($border-radius);
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    &:hover {
+        background-color: #AFAFAF;
+        background-image: none;
+    }
+
+    /* if use icon */
+    .material-icons {
+        margin-left: -4px;
+        margin-right: 4px;
+    }
+
+    /* full width */
+    &.-full-width {
+        display: block;
+        width: 100%;
+    }
+
+    /* type: small */
+    &.-size--small {
+        padding: 6px 16px;
+    }
+
+    /* theme color: primary */
+    &.-theme-primary {
+        background-color: $button-color-top;
+        background-image: linear-gradient(0deg, $button-color-top 0%, $button-color-bottom 100%);
+        &:hover {
+            background-color: $button-color-top;
+            background-image: none;
+        }
+    }
+
+    /* theme color: orange */
+    &.-theme-orange {
+        background-color: #F18700;
+        background-image: linear-gradient(0deg, #F18700 0%, #F39F33 100%);
+        &:hover {
+            background-color: #F18700;
+            background-image: none;
+        }
+    }
+
+    /* theme color: white */
+    &.-theme-white {
+        color: $text-color-secondary;
+        background-color: #fff;
+        background-image: none;
+        &:hover {
+            color: $text-color;
+            background-color: #fff;
+            background-image: none;
+        }
+        &.-is-loading {
+            &:after {
+                border-left-color: $text-color;
+                border-bottom-color: $text-color;
+            }
+        }
+    }
+
+    /* loading state */
+    &.-is-loading {
+        position: relative;
+        color: transparent;
+        &:hover {
+            color: transparent;
+        }
+        &:after {
+            display: block;
+            position: absolute;
+            top: calc(50% - (20px / 2));
+            left: calc(50% - (20px / 2));
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid #fff;
+            border-radius: 290486px;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            -webkit-animation: spin-around .5s infinite linear;
+            animation: spin-around .5s infinite linear;
+        }
+    }
+}

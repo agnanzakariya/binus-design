@@ -1,0 +1,79 @@
+<div class="C--radio-button type--1">
+    <div class="radio-button__item -is-selected">
+        <span class="radio-button__indicator">
+            <span class="indicator__background"></span>
+        </span>
+        <span class="radio-button__label">Male</span>
+        <input type="radio" name="gender" value="A" class="radio-button__component" checked="checked">
+    </div>
+    <div class="radio-button__item">
+        <span class="radio-button__indicator">
+            <span class="indicator__background"></span>
+        </span>
+        <span class="radio-button__label">Female</span>
+        <input type="radio" name="gender" value="B" class="radio-button__component">
+    </div>
+    <div class="radio-button__item -is-disabled">
+        <span class="radio-button__indicator">
+            <span class="indicator__background"></span>
+        </span>
+        <span class="radio-button__label">Other</span>
+        <input type="radio" name="gender" value="C" class="radio-button__component">
+    </div>
+</div>
+
+<!-- component autoload -->
+<div class="C--radio-button type--1 -autoload">
+    ...
+</div>
+
+<!-- vertical layout -->
+<div class="C--radio-button type--1 -autoload -is-vertical">
+    ...
+</div>
+
+<!-- javascript usage -->
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            /**
+             * Component init.
+             * @param {Function} onClickItem
+             */
+            $('.C--radio-button.type--1').BINUS_RadioButton_One({
+                /**
+                 * When item clicked/selected.
+                 * @param {Element} element The selected element.
+                 * @param {Object} input The selected input item. You can use input.val() to get the value of the input item.
+                 */
+                onClickItem: function(element, input) {
+                    console.log('item_clicked', element, input);
+                }
+            });
+
+            /**
+             * If you want to init a component with custom action.
+             */
+            $('.C--radio-button.type--1.Your-Class-Name').BINUS_RadioButton_One({
+                onClickItem: function(element, input) {
+                    console.log('item_clicked', element, input);
+
+                    // do custom action
+                    alert('YOUR_CUSTOM_ACTION');
+                }
+            });
+
+            /**
+             * Reset component.
+             * @param {String} method
+             */
+            $('.C--radio-button.type--1').BINUS_RadioButton_One('reset');
+
+            /**
+             * Destroy component.
+             * @param {String} method
+             */
+            $('.C--radio-button.type--1').BINUS_RadioButton_One('destroy');
+        });
+    })(jQuery);
+</script>

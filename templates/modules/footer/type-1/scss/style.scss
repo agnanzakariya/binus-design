@@ -1,0 +1,25 @@
+.M--footer.type--1 {
+    display: block;
+    position: relative;
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    .footer__copyrights {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 1.35rem;
+        color: #777;
+        line-height: 1.55;
+        text-align: center;
+        a {
+            color: $text-color;
+            text-decoration: none;
+            border-bottom: 1px solid $border-color;
+            -webkit-transition: border .3s;
+            transition: border .3s;
+            &:hover {
+                border-bottom-color: $text-color;
+            }
+        }
+    }
+}
