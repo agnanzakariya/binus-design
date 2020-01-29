@@ -1,0 +1,66 @@
+{
+    "about": {
+        "ID": "binus",
+        "name": "BINUS",
+        "author": {
+            "name": "Fachri Riyanto",
+            "url": "https://fachririyanto.com",
+            "email": "fachririyanto@gmail.com"
+        }
+    },
+    "core": {
+        "scss": [
+            "templates/_core/scss/mixins.scss",
+            "templates/_core/scss/themes/university.scss",
+            "templates/_core/scss/animate.scss",
+            "templates/_core/scss/resets.scss",
+            "templates/_core/scss/style.scss",
+            "templates/_core/scss/typography/block-title.scss",
+            "templates/_core/scss/typography/block-display.scss",
+            "templates/helpers/text-align/type-1/scss/style.scss"
+        ]
+    },
+    "templates": {
+        "login": {
+            "modules": [
+                { "name": "login", "type": "type-1" }
+            ]
+        },
+        "bootstrap-univ": {
+            "components": [
+                { "name": "alert", "type": ["type-1", "type-2"] },
+                { "name": "avatar", "type": ["type-1"] },
+                { "name": "block-header", "type": ["type-1"] },
+                { "name": "breadcrumb", "type": ["type-1"] },
+                { "name": "button", "type": ["type-1"] },
+                { "name": "calendar", "type": ["type-fullcalendar"] },
+                { "name": "card", "type": ["type-1"] },
+                { "name": "datatables", "type": ["type-1"] },
+                { "name": "form/checkbox", "type": ["type-1"] },
+                { "name": "form/combobox", "type": ["type-1"] },
+                { "name": "form/groupbox", "type": ["type-1"] },
+                { "name": "form/passbox", "type": ["type-1"] },
+                { "name": "form/radio-button", "type": ["type-1"] },
+                { "name": "form/textarea", "type": ["type-1"] },
+                { "name": "form/textbox", "type": ["type-1"] },
+                { "name": "form/uploadbox", "type": ["type-1"] },
+                { "name": "legend", "type": ["type-1"] },
+                { "name": "loader", "type": ["type-1"] },
+                { "name": "pagination", "type": ["type-1"] },
+                { "name": "popup", "type": ["type-magnific"] },
+                { "name": "progress", "type": ["type-1"] },
+                { "name": "post", "type": ["type-2"] },
+                { "name": "tab", "type": ["type-1"] },
+                { "name": "table", "type": ["type-1", "type-2"] }
+            ],
+            "modules": [
+                { "name": "navigation", "type": "type-1" },
+                { "name": "sidebar", "type": "type-1" },
+                { "name": "form", "type": "type-1" },
+                { "name": "posts", "type": "type-1" },
+                { "name": "documentation", "type": "type-1" },
+                { "name": "wrapper", "type": "type-1" }
+            ]
+        }
+    }
+}
